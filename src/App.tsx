@@ -22,7 +22,7 @@ function App() {
           <b>Counter Value</b>
           <div>{value ?? 'Loading...'}</div>
         </div>
-        <a  onClick={() => {WebApp.showAlert('Hello world');}}>showAlert</a>
+        <a className='Button' onClick={() => {WebApp.showAlert('Hello world');}}>showAlert</a>
         <a
           className={`Button ${connected ? 'Active' : 'Disabled'}`}
           onClick={() => {
