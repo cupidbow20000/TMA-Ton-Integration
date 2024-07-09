@@ -7,7 +7,7 @@ import WebApp from '@twa-dev/sdk';
 function App() {
   const { connected } = useTonConnect();
   const { value, address, sendIncrement } = useCounterContract();
-  WebApp.showAlert('Hello world');
+  
   return (
     <div className='App'>
       <div className='Container'>
@@ -22,7 +22,7 @@ function App() {
           <b>Counter Value</b>
           <div>{value ?? 'Loading...'}</div>
         </div>
-
+        <div className=''  onClick={() => {WebApp.showAlert('Hello world');}}>showAlert</div>
         <a
           className={`Button ${connected ? 'Active' : 'Disabled'}`}
           onClick={() => {
